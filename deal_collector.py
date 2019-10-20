@@ -91,7 +91,7 @@ class DealCollector:
         for post in r.subreddit(s).new():
             title = str(post.title)
             for key in keywords:
-                if key in title:
+                if key.lower() in title.lower():
                     post_list.append(post)
         self.collect_posts(post_list)
         return True

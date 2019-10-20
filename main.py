@@ -51,7 +51,7 @@ def main():
     deal_bot = DealCollector(args.keywords, twilio_set=args.twilio)
     while True:
         deal_bot.check_for_deals()
-        time.sleep(120)
+        time.sleep(5 * 60)
 
 
 if __name__ == '__main__':
